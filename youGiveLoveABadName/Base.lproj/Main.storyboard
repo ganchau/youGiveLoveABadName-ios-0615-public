@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,16 +15,20 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bonjovi.png" translatesAutoresizingMaskIntoConstraints="NO" id="TR2-VY-ejg">
-                                <rect key="frame" x="0.0" y="197" width="320" height="174"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bonjovi.png" translatesAutoresizingMaskIntoConstraints="NO" id="TR2-VY-ejg">
+                                <rect key="frame" x="0.0" y="195" width="600" height="210"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-wJ-vCJ">
-                                <rect key="frame" x="134" y="498" width="53" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-wJ-vCJ">
+                                <rect key="frame" x="250" y="546" width="100" height="34"/>
+                                <color key="backgroundColor" red="0.90509673810000002" green="0.90509673810000002" blue="0.90509673810000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="4c5-D8-KfW"/>
+                                    <constraint firstAttribute="height" constant="34" id="URI-30-m7v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                 <state key="normal" title="Expand">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -32,21 +38,27 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="zaR-wJ-vCJ" secondAttribute="bottom" constant="20" id="OWA-SN-6L1"/>
+                            <constraint firstItem="TR2-VY-ejg" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.35" id="Oyp-mz-ERh"/>
+                            <constraint firstAttribute="centerX" secondItem="TR2-VY-ejg" secondAttribute="centerX" id="Uyp-nk-yVk"/>
+                            <constraint firstAttribute="centerX" secondItem="zaR-wJ-vCJ" secondAttribute="centerX" id="cQH-eZ-ZTa"/>
+                            <constraint firstAttribute="centerY" secondItem="TR2-VY-ejg" secondAttribute="centerY" id="rwY-lD-maw"/>
+                            <constraint firstAttribute="width" secondItem="TR2-VY-ejg" secondAttribute="width" id="xZ8-y5-CdH"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="bonJovi" destination="TR2-VY-ejg" id="Wbp-Ut-2KG"/>
+                        <outlet property="bonJoviHeightConstraint" destination="Oyp-mz-ERh" id="Hye-Bf-ktq"/>
+                        <outlet property="expandButton" destination="zaR-wJ-vCJ" id="chy-Di-hf7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="797" y="327"/>
         </scene>
     </scenes>
     <resources>
         <image name="bonjovi.png" width="466" height="310"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
